@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 
 import TopCards from '@/components/TopCards';
 import BarChart from '@/components/BarChart';
+import HistoryTable from '@/components/HistoryTable';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -38,7 +39,10 @@ const Home = () => {
           <TopCards key={item.title} title={item.title} time={item.time} body={item.body} />
         ))}
       </div>
-      <BarChart />
+      <div className="mb-8">
+        <BarChart />
+      </div>
+      <HistoryTable />
     </main>
   );
 };
