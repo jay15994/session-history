@@ -26,4 +26,7 @@ body {
   .card {
     @apply mr-2.5 inline-block bg-[#0F131A] rounded-2xl border-2 border-gray-800 p-7;
   }
+  .title {
+    @apply text-[40px] leading-none;
+  }
 }

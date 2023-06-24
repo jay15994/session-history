@@ -84,7 +84,7 @@ const BarChart = () => {
 
   return (
     <div className="card w-full">
-      <p className='leading-none mb-8 text-[40px]'>Session Activity</p>
+      <p className='title mb-8'>Session Activity</p>
       <canvas ref={canvasRef} />
     </div>
   );
