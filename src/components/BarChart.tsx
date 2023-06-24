@@ -34,6 +34,7 @@ const BarChart = () => {
         ],
       },
       options: {
+        maintainAspectRatio: false,
         scales: {
           y: {
             beginAtZero: true,
@@ -43,6 +44,7 @@ const BarChart = () => {
               color: '#1A202C',
             },
             ticks: {
+              stepSize: 25,
               color: '#8A8A8A',
               font: {
                 size: 16,
@@ -85,7 +87,9 @@ const BarChart = () => {
   return (
     <div className="card w-full">
       <p className='title mb-8'>Session Activity</p>
-      <canvas ref={canvasRef} />
+      <div className='h-[220px]'>
+        <canvas ref={canvasRef} />
+      </div>
     </div>
   );
 };
