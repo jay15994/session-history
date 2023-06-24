@@ -1,6 +1,4 @@
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
+import React from 'react';
 
 interface TopCardsProp {
   title: string;
@@ -9,7 +7,7 @@ interface TopCardsProp {
 }
 
 const TopCards = ({ title, time, body }: TopCardsProp) => (
-  <div className="mr-2.5 inline-block bg-[#0F131A] rounded-2xl border-2 border-gray-800 p-7">
+  <div className="card">
     <div className="flex mb-8">
       <span className="leading-none whitespace-nowrap text-[20px] text-[#808080] mr-8">
         {title}
