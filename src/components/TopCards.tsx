@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 
 interface TopCardsProp {
   title: string;
@@ -13,7 +14,10 @@ const TopCards = ({ title, time, body }: TopCardsProp) => (
         {title}
       </span>
       <span
-        className={`leading-none text-[16px] text-[${time.includes('+') ? '#36884C' : '#DA1C2C'}]`}
+        className={classnames(`leading-none text-[16px]`, {
+          'text-[#36884C]': time.includes('+'),
+          'text-[#DA1C2C]': time.includes('-'),
+        })}
       >
         {time}
       </span>
