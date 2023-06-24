@@ -1,11 +1,8 @@
 import React from 'react';
-import { Inter } from 'next/font/google';
 
 import TopCards from '@/components/TopCards';
 import BarChart from '@/components/BarChart';
 import HistoryTable from '@/components/HistoryTable';
-
-const inter = Inter({ subsets: ['latin'] });
 
 const topCardsList = [
   {
@@ -32,7 +29,7 @@ const topCardsList = [
 
 const Home = () => {
   return (
-    <main className={`min-h-screen bg-[#090A0F] p-[50px] ${inter.className}`}>
+    <main className={`min-h-screen bg-[#090A0F] p-[50px] font-tomorrow`}>
       <h1 className="title mb-8">Session History</h1>
       <div className="flex overflow-x-auto mb-8">
         {topCardsList.map(item => (
